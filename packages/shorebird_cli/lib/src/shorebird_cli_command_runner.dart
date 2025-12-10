@@ -68,6 +68,7 @@ class ShorebirdCliCommandRunner extends CompletionCommandRunner<int> {
         help: 'The build of the local engine to use as the host platform.',
       );
 
+    addCommand(BuildCommand());
     addCommand(CacheCommand());
     addCommand(CreateCommand());
     addCommand(DoctorCommand());

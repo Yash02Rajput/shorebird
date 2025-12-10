@@ -1,3 +1,4 @@
+export 'build/build.dart';
 export 'cache/cache.dart';
 export 'create.dart';
 export 'doctor_command.dart';

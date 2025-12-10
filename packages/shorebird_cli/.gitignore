@@ -12,3 +12,6 @@ coverage/
 
 # Android studio and IntelliJ
 .idea
+
+!lib/src/commands/build/
+!lib/src/commands/build/**
