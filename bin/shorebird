@@ -5,7 +5,7 @@ set -e
 # https://gist.github.com/ptc-mrucci/61772387878ed53a6c717d51a21d9371
 # https://stackoverflow.com/questions/59895/how-do-i-get-the-directory-where-a-bash-script-is-located-from-within-the-script/67149152#67149152
 
-BIN_DIR=$(cd "$(dirname "$BASH_SOURCE")"; pwd)
+BIN_DIR=$(cd "$(dirname "$BASH_SOURCE")"; cd -P "$(dirname "$(readlink "$BASH_SOURCE" || echo .)")"; pwd)
 PROG_NAME="$BIN_DIR/$(basename "$BASH_SOURCE")"
 OS="$(uname -s)"
 
